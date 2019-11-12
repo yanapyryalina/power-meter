@@ -61,5 +61,8 @@ frames = [data[i*4:(i+1)*4] for i in range(len(data)//4)]
 # Generate plot and save to /figures
 df = pd.DataFrame(frames, columns=['c09-13', 'c09-14', 'c09-15', 'c09-16']) # Categorizes based on server names
 plt.figure()
+plt.title('Server power consumption per time : Session ' + session_id, fontsize=20) # name the graph
+plt.xlabel('Seconds', fontsize=15) # set name for x axis
+plt.ylabel('Watts', fontsize=15) # set name for y axis
 df.plot()
 plt.savefig('figures/'+session_id+'.png') # Saves graph in figures dir
