@@ -6,4 +6,4 @@
 
 # Import necessary packages
 import vxi11, sched, time, random, string
-from stress import stressypy
+import stressypy
